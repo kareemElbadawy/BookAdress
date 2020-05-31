@@ -1,0 +1,47 @@
+<form #form="ngForm" (submit)="onSubmit(form)">
+  <input type="hidden" name="id" #id="ngModel" [(ngModel)]="service.formData.id">
+
+  <div class="input-field col s12">
+    <input type="text" name="fullName" #fullName="ngModel" [(ngModel)]="service.formData.fullName"  >
+    <label>full Name</label>
+
+  </div>
+  <div class="input-field col s12">
+    <label>job ID</label>
+    <input type="text" name="jobID" #jobID="ngModel" [(ngModel)]="service.formData.jobID" >
+  </div>
+  <div class="input-field col s12">
+    <label>DepID</label>
+    <input type="number" name="DepID" #DepID="ngModel" [(ngModel)]="service.formData.DepID" >
+  </div>
+  <div class="input-field col s12">
+    <input name="phone" type="number" #phone="ngModel" [(ngModel)]="service.formData.phone"  class="validate" required>
+    <label data-error="Invalid phone">phone</label>
+
+  </div>
+  <div class="input-field col s12">
+    <label>Birth Date</label>
+    <!-- <p-calendar name="birthDate"  #birthDate="ngModel" dateFormat="yy-mm-dd"  [(ngModel)]="service.formData.birthDate" [showIcon]="true"></p-calendar> -->
+    <input name="birthDate" type="text" #birthDate="ngModel" [(ngModel)]="service.formData.birthDate" >
+  </div>
+  <div class="input-field col s12">
+    <input name="email" type="text" #email="ngModel" [(ngModel)]="service.formData.email"  class="validate" required>
+    <label data-error="Invalid email">email</label>
+
+  </div>
+  <div class="input-field col s12">
+    <label>address</label>
+    <input name="address" type="text" #address="ngModel" [(ngModel)]="service.formData.address" >
+  </div>
+  <div class="input-field col s12">
+    <label>photo</label>
+    <input name="photo" type="text" #photo="ngModel" [(ngModel)]="service.formData.photo" >
+  </div>
+  <div class="input-field col s12">
+    <label>age</label>
+    <input name="age" type="number" #age="ngModel" [(ngModel)]="service.formData.age" >
+  </div>
+  <div class="input-field col s12">
+   <button type="submit"  [disabled]="form.invalid" class="btn-large btn-submit">Submit</button> 
+  </div>
+</form>

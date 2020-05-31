@@ -1,0 +1,8 @@
+<table class="table responsive-table highlight">
+  <tr *ngFor="let address of service.list">
+    <td (click)="populateForm(address)">{{address.fullName}}</td>
+    <td (click)="populateForm(address)">{{address.email}}</td>
+    <td (click)="populateForm(address)">{{address.phone}}</td>
+    <td><button (click)="onDelete(address.id)" class="btn btn-sm red">X</button></td>
+  </tr>
+</table>
