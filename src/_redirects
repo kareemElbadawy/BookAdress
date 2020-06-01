@@ -1,1 +1,2 @@
 /api/* http://kareemelbadawy-001-site1.dtempurl.com/api/:splat 200!
+/token/* http://kareemelbadawy-001-site1.dtempurl.com/token/:splat 200!
