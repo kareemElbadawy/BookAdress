@@ -22,7 +22,7 @@ registerUser(user:User)
     FirstName:user.FirstName,
     LastName:user.LastName
   }
-  return this.http.post(this.rootUrl + '/api/User/Register',body);
+  return this.http.post('/api/User/Register',body);
 }
 userAuthentication(userName, password) {
   let params = new HttpParams();
@@ -31,9 +31,9 @@ userAuthentication(userName, password) {
   params = params.append("grant_type",'password');
   var data = params.toString();
   var reqHeader = new HttpHeaders({ 'Content-Type': 'application/x-www-urlencoded','No-Auth':'True' });
-  return this.http.post(this.rootUrl + '/token', data, { headers: reqHeader });
+  return this.http.post('/token', data, { headers: reqHeader });
   }
 getUserClaims(){
-   return  this.http.get(this.rootUrl+'/api/GetUserClaims');
+   return  this.http.get('/api/GetUserClaims');
   }
 }
